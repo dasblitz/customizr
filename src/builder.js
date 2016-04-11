@@ -44,12 +44,14 @@ module.exports = function (modernizrPath) {
 			// Store options
 			var options = settings.options;
 
+			var classPrefix = settings.classPrefix || '';
+
 			var modernizrOptions = {
 				"feature-detects": tests,
 				"options": options,
+				"classPrefix": classPrefix,
 				"minify": minify,
-				"dest": settings.dest,
-				"classPrefix" : settings.classPrefix
+				"dest": settings.dest
 			};
 
 			// Perform a series of checks to validify cache
